@@ -143,12 +143,12 @@ body {
     color: white;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
     transition: all 0.2s;
-    box-shadow: 0 4px 0 #003399, 0 6px 10px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 0 #15161B, 0 6px 10px rgba(0,0,0,0.3);
 }
 
 .login-button:hover {
     background: linear-gradient(180deg, #66BBFF 0%, #3399FF 100%);
-    box-shadow: 0 4px 0 #003399, 0 6px 20px rgba(0, 170, 255, 0.5);
+    box-shadow: 0 4px 0 #15161B, 0 6px 20px rgba(0, 170, 255, 0.5);
     transform: translateY(-2px);
 }
 
@@ -677,7 +677,7 @@ body {
 .browser-content::-webkit-scrollbar-thumb {
     background: linear-gradient(90deg, #3399FF, #0055FF);
     border: 2px solid;
-    border-color: #66BBFF #003399 #003399 #66BBFF;
+    border-color: #66BBFF #15161B #15161B #66BBFF;
 }
 
 .browser-content::-webkit-scrollbar-thumb:hover {
@@ -806,7 +806,7 @@ body {
 .mail-content::-webkit-scrollbar-thumb {
     background: linear-gradient(90deg, #3399FF, #0055FF);
     border: 2px solid;
-    border-color: #66BBFF #003399 #003399 #66BBFF;
+    border-color: #66BBFF #15161B #15161B #66BBFF;
 }
 
 .mail-content::-webkit-scrollbar-thumb:hover {
