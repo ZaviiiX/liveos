@@ -9,7 +9,7 @@ const errorMsg      = document.getElementById('errorMsg');
 const CORRECT_PASSWORD = 'solana';
 
 // ---- GLOBALS ----
-const CONTRACT_ADDRESS = '424tCJy2ZFctvznL2Qi1h7YvwWJZNWNoy3FELGPs3fKy';
+const CONTRACT_ADDRESS = '5VwPNQNWudsmNYHda2vmyi88y9HeNdJtSQh6a1DUZLcU';
 const TWITTER_URL = 'https://x.com/solana_xp'; // promijeni kad bude pravi handle
 
 // ---- AUDIO ----
