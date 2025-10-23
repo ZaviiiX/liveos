@@ -6,7 +6,7 @@ const loginBtn = document.getElementById('loginBtn');
 const errorMsg = document.getElementById('errorMsg');
 
 // Correct password
-const CORRECT_PASSWORD = 'ALIVE';
+const CORRECT_PASSWORD = 'PUMP';
 
 // Sound effects
 const startupSound = new Audio('startup.mp3');
