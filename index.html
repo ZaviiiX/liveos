@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lively OS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Login Screen -->
+    <div id="loginScreen" class="login-screen">
+        <div class="login-box">
+            <div class="login-logo">
+                <h1>Lively OS</h1>
+            </div>
+            <div class="login-form">
+                <div class="input-group">
+                    <label for="password">Enter Password:</label>
+                    <input type="password" id="password" placeholder="Password" autofocus>
+                </div>
+                <button id="loginBtn" class="login-button">Log In</button>
+                <div id="errorMsg" class="error-message"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Desktop -->
+    <div id="desktop" class="desktop hidden">
+        <!-- Taskbar -->
+        <div class="taskbar">
+            <div class="start-button">
+                <span class="start-icon">⊞</span>
+                <span>Start</span>
+            </div>
+            <div class="taskbar-tasks"></div>
+            <div class="taskbar-tray">
+                <button id="muteToggle" class="mute-toggle" title="Toggle Music">🔊</button>
+                <div class="clock" id="clock"></div>
+            </div>
+        </div>
+
+        <!-- Desktop Icons -->
+        <div class="desktop-icons">
+            <div class="desktop-icon" id="browserIcon">
+                <div class="icon-image"><img src="Internet.png" alt="Lively Browser"></div>
+                <div class="icon-label">Lively Browser</div>
+            </div>
+            <div class="desktop-icon" id="rewardsIcon">
+                <div class="icon-image"><img src="rewards.png" alt="Rewards"></div>
+                <div class="icon-label">Rewards</div>
+            </div>
+            <div class="desktop-icon" id="myComputerIcon">
+                <div class="icon-image"><img src="MyComputer.png" alt="My Computer"></div>
+                <div class="icon-label">My Computer</div>
+            </div>
+            <div class="desktop-icon" id="mailIcon">
+                <div class="icon-image"><img src="Mail.png" alt="Mail"></div>
+                <div class="icon-label">Mail</div>
+            </div>
+            <div class="desktop-icon" id="helperIcon">
+                <div class="icon-image"><img src="Helper.png" alt="Desktop Helper"></div>
+                <div class="icon-label">Desktop Helper</div>
+            </div>
+            <div class="desktop-icon" id="recycleBinIcon">
+                <div class="icon-image"><img src="RecycleBin1.png" alt="Recycle Bin"></div>
+                <div class="icon-label">Recycle Bin</div>
+            </div>
+            <div class="desktop-icon" id="powerIcon">
+                <div class="icon-image"><img src="Power.png" alt="Power"></div>
+                <div class="icon-label">Power</div>
+            </div>
+        </div>
+
+        <!-- Welcome Window -->
+        <div class="window welcome-window">
+            <div class="window-titlebar">
+                <span class="window-title">Welcome to Lively OS</span>
+                <div class="window-controls">
+                    <button class="window-btn minimize">_</button>
+                    <button class="window-btn maximize">□</button>
+                    <button class="window-btn close">×</button>
+                </div>
+            </div>
+            <div class="window-content welcome-content">
+                <div class="welcome-header">
+                    <h2>Welcome to Lively OS!</h2>
+                    <div class="header-buttons">
+                        <button id="welcomeCopyCA" class="copy-ca-btn" title="Copy Contract Address">Copy CA</button>
+                        <a href="#" id="welcomeTwitterLink" class="twitter-icon" title="Follow us on Twitter/X" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white">
+                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <p>You have successfully logged in to the Lively OS environment.</p>
+                <p>This retro-styled desktop interface provides a nostalgic computing experience.</p>
+                <br>
+                <p><strong>System Status:</strong> Online</p>
+                <p><strong>Network:</strong> Connected</p>
+            </div>
+        </div>
+
+        <!-- My Computer Window -->
+        <div class="window mycomputer-window hidden" style="width: 650px; max-width: 90vw;">
+            <div class="window-titlebar">
+                <span class="window-title">My Computer - System Control Panel</span>
+                <div class="window-controls">
+                    <button class="window-btn minimize mycomputer-minimize">_</button>
+                    <button class="window-btn maximize">□</button>
+                    <button class="window-btn close mycomputer-close">×</button>
+                </div>
+            </div>
+            <div class="window-content">
+                <h2>System Information</h2>
+                <div class="control-panel-section">
+                    <h3>Computer Details</h3>
+                    <p><strong>Operating System:</strong> Lively OS v2.0</p>
+                    <p><strong>Processor:</strong> Quantum Core i9-9900K @ 3.60GHz</p>
+                    <p><strong>RAM:</strong> 16.0 GB</p>
+                    <p><strong>System Type:</strong> 64-bit Operating System</p>
+                </div>
+                <div class="control-panel-section">
+                    <h3>Storage</h3>
+                    <p><strong>C: Drive (System):</strong> 256 GB SSD - 128 GB Free</p>
+                    <p><strong>D: Drive (Data):</strong> 1 TB HDD - 500 GB Free</p>
+                </div>
+                <div class="control-panel-section">
+                    <h3>Network</h3>
+                    <p><strong>Status:</strong> Connected</p>
+                    <p><strong>IP Address:</strong> 192.168.1.100</p>
+                    <p><strong>MAC Address:</strong> 00:1B:44:11:3A:B7</p>
+                </div>
+                <div class="control-panel-section">
+                    <h3>Performance</h3>
+                    <p><strong>CPU Usage:</strong> 23%</p>
+                    <p><strong>Memory Usage:</strong> 8.2 GB / 16 GB</p>
+                    <p><strong>Uptime:</strong> 2 days, 4 hours, 32 minutes</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mail Window -->
+        <div class="window mail-window hidden" style="width: 700px; max-width: 90vw;">
+            <div class="window-titlebar">
+                <span class="window-title">Lively Mail - Inbox</span>
+                <div class="window-controls">
+                    <button class="window-btn minimize mail-minimize">_</button>
+                    <button class="window-btn maximize">□</button>
+                    <button class="window-btn close mail-close">×</button>
+                </div>
+            </div>
+            <div class="window-content mail-content">
+                <div class="mail-header">
+                    <h2>Inbox (4 messages)</h2>
+                </div>
+                <div class="email-list">
+                    <div class="email-item">
+                        <div class="email-from"><strong>From:</strong> CEO@livelyos.com</div>
+                        <div class="email-subject"><strong>Subject:</strong> Congratulations on Lively OS Launch!</div>
+                        <div class="email-preview">Team, I'm thrilled to announce that Lively OS has officially launched! Our user base has grown to over 100,000 active users in just the first week...</div>
+                        <div class="email-date">Oct 10, 2025 - 3:45 PM</div>
+                    </div>
+                    <div class="email-item">
+                        <div class="email-from"><strong>From:</strong> marketing@livelyos.com</div>
+                        <div class="email-subject"><strong>Subject:</strong> Record-Breaking Downloads!</div>
+                        <div class="email-preview">Amazing news! Lively OS has reached 500,000 downloads this month, surpassing all our projections. The community response has been incredible...</div>
+                        <div class="email-date">Oct 9, 2025 - 11:20 AM</div>
+                    </div>
+                    <div class="email-item">
+                        <div class="email-from"><strong>From:</strong> investors@techventures.com</div>
+                        <div class="email-subject"><strong>Subject:</strong> Series A Funding Approved</div>
+                        <div class="email-preview">We're excited to inform you that your Series A funding round of $10M has been approved. The board is impressed with Lively OS's traction...</div>
+                        <div class="email-date">Oct 8, 2025 - 9:15 AM</div>
+                    </div>
+                    <div class="email-item">
+                        <div class="email-from"><strong>From:</strong> community@livelyos.com</div>
+                        <div class="email-subject"><strong>Subject:</strong> 5-Star Reviews Flooding In!</div>
+                        <div class="email-preview">The community is loving Lively OS! We've received over 10,000 five-star reviews praising the retro aesthetic and smooth performance...</div>
+                        <div class="email-date">Oct 7, 2025 - 2:30 PM</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Desktop Buddy -->
+        <div class="desktop-buddy hidden" id="desktopBuddy">
+            <button class="buddy-close" id="buddyClose">×</button>
+            <img src="desktophelper1.png" alt="Lively Bot" class="buddy-mascot" id="buddyMascot">
+            
+            <!-- Speech Bubbles -->
+            <div class="speech-bubble bot-bubble hidden" id="botBubble">
+                <div class="bubble-content" id="botBubbleContent">
+                    Hello! I'm Lively Bot! 👋 Ask me anything about Lively OS!
+                </div>
+                <div class="bubble-tail"></div>
+            </div>
+            
+            <div class="speech-bubble user-bubble hidden" id="userBubble">
+                <input type="text" id="userInput" placeholder="Type here..." class="user-input">
+                <button id="sendBtn" class="send-btn">Send</button>
+            </div>
+        </div>
+
+        <!-- Recycle Bin Window -->
+        <div class="window recyclebin-window hidden" style="width: 550px; max-width: 90vw;">
+            <div class="window-titlebar">
+                <span class="window-title">Recycle Bin</span>
+                <div class="window-controls">
+                    <button class="window-btn minimize recyclebin-minimize">_</button>
+                    <button class="window-btn maximize">□</button>
+                    <button class="window-btn close recyclebin-close">×</button>
+                </div>
+            </div>
+            <div class="window-content recyclebin-content">
+                <div class="recyclebin-header">
+                    <h2>Recycle Bin</h2>
+                    <p>Your recycle bin is currently empty.</p>
+                </div>
+                <div class="empty-bin-illustration">
+                    <div class="bin-icon">🗑️</div>
+                    <p class="empty-message">No items to display</p>
+                    <p class="empty-submessage">Deleted files will appear here</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Shutdown Overlay -->
+        <div id="shutdownOverlay" class="shutdown-overlay hidden">
+            <div class="shutdown-content">
+                <div class="shutdown-logo">Lively OS</div>
+                <div class="shutdown-message">Shutting down...</div>
+                <div class="shutdown-spinner"></div>
+            </div>
+        </div>
+
+        <!-- Lively Browser Window -->
+        <div class="window browser-window hidden" style="width: 700px; max-width: 90vw;">
+            <div class="window-titlebar browser-titlebar">
+                <span class="window-title">Lively Token - Official Information Portal</span>
+                <div class="window-controls">
+                    <button class="window-btn minimize">_</button>
+                    <button class="window-btn maximize">□</button>
+                    <button class="window-btn close browser-close">×</button>
+                </div>
+            </div>
+            <div class="window-content browser-content">
+                <div class="browser-header">
+                    <h2>LIVELY - By Traders, For Traders</h2>
+                    <div class="header-buttons">
+                        <button id="browserCopyCA" class="copy-ca-btn" title="Copy Contract Address">Copy CA</button>
+                        <a href="#" id="twitterLink" class="twitter-icon" title="Follow us on Twitter/X" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white">
+                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="info-section">
+                    <h3>What is Lively?</h3>
+                    <p>Lively is a revolutionary project building a fully customizable operating system designed specifically by traders, for traders. Our vision is to create the ultimate trading environment that combines cutting-edge technology with the flexibility and tools traders need to succeed.</p>
+                    <p>This is more than just software - it's a complete ecosystem that puts the power of customization in your hands. Whether you're a day trader, crypto enthusiast, or professional investor, Lively adapts to your unique workflow and trading style.</p>
+                </div>
+
+                <div class="info-section">
+                    <h3>The Lively Operating System</h3>
+                    <p><strong>Fully Customizable Trading Environment:</strong></p>
+                    <ul>
+                        <li>Tailored specifically for trading professionals and enthusiasts</li>
+                        <li>Complete control over your workspace layout and tools</li>
+                        <li>Optimized for multi-monitor setups and real-time data</li>
+                        <li>Built-in integrations with major trading platforms and exchanges</li>
+                        <li>Lightning-fast performance with minimal resource overhead</li>
+                    </ul>
+                    <p><strong>Key Features:</strong></p>
+                    <ul>
+                        <li>Advanced charting tools and technical analysis widgets</li>
+                        <li>Real-time market data and customizable dashboards</li>
+                        <li>Automated trading bot integration</li>
+                        <li>Secure wallet management and portfolio tracking</li>
+                        <li>Community-driven development and regular updates</li>
+                    </ul>
+                </div>
+
+                <div class="info-section">
+                    <h3>$LIVELY Token Information</h3>
+                    <p><strong>Token Name:</strong> Lively OS</p>
+                    <p><strong>Symbol:</strong> $LIVELY</p>
+                    <p><strong>Blockchain:</strong> BNB Chain (BEP-20)</p>
+                    <p><strong>Contract Address:</strong> 0x... (Verified on BSCScan)</p>
+                    <p><strong>Total Supply:</strong> 1,000,000,000 LIVELY</p>
+                    <p><strong>Token Purpose:</strong> $LIVELY serves as the native token of the Lively ecosystem, granting holders access to premium features, governance rights, and exclusive rewards.</p>
+                </div>
+
+                <div class="info-section">
+                    <h3>Tokenomics</h3>
+                    <ul>
+                        <li><strong>Total Supply:</strong> 1,000,000,000 $LIVELY</li>
+                        <li><strong>Liquidity Pool:</strong> 90% (Locked)</li>
+                        <li><strong>Community Rewards:</strong> 4%</li>
+                        <li><strong>Development Fund:</strong> 5% (Vested)</li>
+                        <li><strong>Marketing & Partnerships:</strong> 3%</li>
+                        <li><strong>Team Allocation:</strong> 5% (Vested)</li>
+                    </ul>
+                </div>
+
+                <div class="info-section">
+                    <h3>Token Utility & Benefits</h3>
+                    <p><strong>Operating System Access:</strong></p>
+                    <ul>
+                        <li>Free access to Lively OS basic version for all token holders</li>
+                        <li>Premium features unlocked based on token holdings</li>
+                        <li>Priority updates and early access to new tools</li>
+                        <li>Lifetime license - hold tokens, keep access</li>
+                    </ul>
+                    <p><strong>Governance & Community:</strong></p>
+                    <ul>
+                        <li>Vote on new features and development priorities</li>
+                        <li>Propose custom tools and integrations</li>
+                        <li>Access to exclusive trading strategies and signals</li>
+                        <li>Direct communication with the development team</li>
+                    </ul>
+                    <p><strong>Revenue Sharing:</strong></p>
+                    <ul>
+                        <li>Holders receive a share of revenue from enterprise licenses</li>
+                        <li>Automatic reflections from platform transaction fees</li>
+                        <li>Quarterly dividend distributions to long-term holders</li>
+                    </ul>
+                </div>
+
+                <div class="info-section">
+                    <h3>Security & Trust</h3>
+                    <ul>
+                        <li>Contract audited by certified blockchain security firms</li>
+                        <li>Liquidity locked for 2 years on trusted platforms</li>
+                        <li>Team tokens vested with time-locked smart contracts</li>
+                        <li>Regular transparency reports published quarterly</li>
+                        <li>Multi-signature wallet for community fund protection</li>
+                    </ul>
+                </div>
+
+                <div class="info-section">
+                    <h3>Development Roadmap</h3>
+                    <ul>
+                        <li><strong>Q4 2025:</strong> Token launch, Lively OS Alpha release, community building</li>
+                        <li><strong>Q1 2026:</strong> Beta version with advanced charting tools, major exchange listings</li>
+                        <li><strong>Q2 2026:</strong> Full OS release v1.0, trading bot marketplace integration</li>
+                        <li><strong>Q3 2026:</strong> Mobile companion app, cloud sync features</li>
+                        <li><strong>Q4 2026:</strong> Enterprise solutions, institutional trader tools, DAO governance launch</li>
+                    </ul>
+                </div>
+
+                <div class="info-section">
+                    <h3>Built By Traders, For Traders</h3>
+                    <p>Our team consists of experienced traders who understand the challenges and needs of the trading community. Every feature in Lively OS is designed with real-world trading in mind, tested by actual traders, and optimized for performance and reliability.</p>
+                    <p>We're not just building software - we're building a community of traders who support each other and share the vision of a better trading experience.</p>
+                </div>
+
+                <div class="info-section">
+                    <h3>Official Resources</h3>
+                    <p><strong>Website:</strong> livelyos.xyz</p>
+                    <p><strong>Contract Explorer:</strong> BSCScan.com</p>
+                    <p><strong>Trading:</strong> PancakeSwap, Binance DEX</p>
+                    <p><strong>Community:</strong> Telegram, Discord, Twitter</p>
+                </div>
+
+                <div class="info-section">
+                    <h3>Important Notice</h3>
+                    <p>Cryptocurrency investments carry inherent risks. Please conduct thorough research and only invest what you can afford to lose. The Lively token team is committed to transparency and long-term sustainable growth, but market conditions can be volatile. Always verify contract addresses and only purchase through official channels.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Rewards Window -->
+        <div class="window rewards-window hidden" style="width: 700px; max-width: 90vw;">
+            <div class="window-titlebar">
+                <span class="window-title">Rewards - $LIVELY Token Holder Benefits</span>
+                <div class="window-controls">
+                    <button class="window-btn minimize rewards-minimize">_</button>
+                    <button class="window-btn maximize">□</button>
+                    <button class="window-btn close rewards-close">×</button>
+                </div>
+            </div>
+            <div class="window-content browser-content">
+                <div class="browser-header">
+                    <h2>Rewards Program Overview</h2>
+                </div>
+                
+                <div class="info-section">
+                    <h3>Automatic Reflection Rewards</h3>
+                    <p>Hold $LIVELY tokens and automatically earn passive income with every transaction on the network.</p>
+                    <ul>
+                        <li><strong>2% Reflection:</strong> 2% of every buy/sell transaction is automatically redistributed to all holders proportionally</li>
+                        <li><strong>No Staking Required:</strong> Simply hold tokens in your wallet - rewards are automatic</li>
+                        <li><strong>Compounding Effect:</strong> Your holdings grow over time as reflections accumulate</li>
+                        <li><strong>Hourly Distribution:</strong> Rewards are distributed to holders every hour</li>
+                    </ul>
+                </div>
+
+                <div class="info-section">
+                    <h3>Tiered Benefits System</h3>
+                    <p>Unlock exclusive perks and benefits based on your token holdings:</p>
+                    
+                    <p><strong>Bronze Tier (100,000+ $LIVELY)</strong></p>
+                    <ul>
+                        <li>Access to exclusive community channels</li>
+                        <li>Early announcements and updates</li>
+                        <li>Basic trading signals access</li>
+                        <li>Community voting rights</li>
+                    </ul>
+
+                    <p><strong>Silver Tier (500,000+ $LIVELY)</strong></p>
+                    <ul>
+                        <li>All Bronze benefits plus:</li>
+                        <li>Priority customer support</li>
+                        <li>Quarterly bonus airdrops</li>
+                        <li>Advanced trading signals</li>
+                        <li>Governance voting rights</li>
+                        <li>Beta access to new features</li>
+                    </ul>
+
+                    <p><strong>Gold Tier (1,000,000+ $LIVELY)</strong></p>
+                    <ul>
+                        <li>All Silver benefits plus:</li>
+                        <li>Exclusive NFT drops and collectibles</li>
+                        <li>Partnership perks and discounts</li>
+                        <li>VIP trading room access</li>
+                        <li>Premium Lively OS features unlocked</li>
+                        <li>Monthly strategy sessions</li>
+                    </ul>
+
+                    <p><strong>Diamond Tier (5,000,000+ $LIVELY)</strong></p>
+                    <ul>
+                        <li>All Gold benefits plus:</li>
+                        <li>Private Discord channel with dev team</li>
+                        <li>Direct team consultations</li>
+                        <li>Premium reward multiplier (1.5x reflections)</li>
+                        <li>Lifetime Lively OS Enterprise license</li>
+                        <li>Featured in community spotlights</li>
+                        <li>Exclusive merchandise and swag</li>
+                    </ul>
+                </div>
+
+                <div class="info-section">
+                    <h3>Monthly Loyalty Bonuses</h3>
+                    <p>Diamond hands are rewarded! Hold your tokens longer to earn additional bonuses:</p>
+                    <ul>
+                        <li><strong>30+ Days:</strong> Additional 0.5% bonus on all reflections</li>
+                        <li><strong>90+ Days:</strong> 1% bonus on all reflections + exclusive badge</li>
+                        <li><strong>180+ Days:</strong> 2% bonus on all reflections + priority support + special NFT</li>
+                        <li><strong>365+ Days:</strong> 3% bonus + Diamond Hand NFT + Founder status</li>
+                    </ul>
+                    <p><em>Bonuses stack with your tier benefits for maximum rewards!</em></p>
+                </div>
+
+                <div class="info-section">
+                    <h3>Revenue Sharing Program</h3>
+                    <p>Token holders directly benefit from the success of the Lively ecosystem:</p>
+                    <ul>
+                        <li><strong>Enterprise License Revenue:</strong> 20% of all enterprise sales distributed to holders</li>
+                        <li><strong>Platform Fees:</strong> Transaction fees from Lively OS marketplace shared with community</li>
+                        <li><strong>Quarterly Dividends:</strong> Profit-sharing distributions every quarter</li>
+                        <li><strong>Partnership Revenues:</strong> Share in revenues from strategic partnerships</li>
+                    </ul>
+                </div>
+
+                <div class="info-section">
+                    <h3>Special Campaigns & Events</h3>
+                    <ul>
+                        <li><strong>Trading Competitions:</strong> Monthly contests with prize pools</li>
+                        <li><strong>Referral Rewards:</strong> Earn bonuses for bringing new holders</li>
+                        <li><strong>Community Challenges:</strong> Complete tasks for extra rewards</li>
+                        <li><strong>Holiday Bonuses:</strong> Special airdrops during major holidays</li>
+                        <li><strong>Holder Anniversaries:</strong> Annual rewards for long-term holders</li>
+                    </ul>
+                </div>
+
+                <div class="info-section">
+                    <h3>Track Your Rewards</h3>
+                    <p>Monitor your earnings and benefits in real-time:</p>
+                    <ul>
+                        <li>View your current tier status and next milestone</li>
+                        <li>Track daily, weekly, and monthly reflection earnings</li>
+                        <li>See upcoming airdrops and eligibility</li>
+                        <li>Calculate potential earnings with our rewards calculator</li>
+                        <li>Access detailed rewards history and analytics</li>
+                    </ul>
+                </div>
+
+                <div class="info-section">
+                    <h3>How to Maximize Your Rewards</h3>
+                    <ul>
+                        <li><strong>Hold Long-Term:</strong> Accumulate loyalty bonuses over time</li>
+                        <li><strong>Increase Holdings:</strong> Move up tiers for better benefits</li>
+                        <li><strong>Stay Active:</strong> Participate in community events and challenges</li>
+                        <li><strong>Compound Reflections:</strong> Let your rewards grow automatically</li>
+                        <li><strong>Refer Friends:</strong> Earn referral bonuses</li>
+                    </ul>
+                </div>
+
+                <div class="info-section">
+                    <h3>Getting Started</h3>
+                    <p><strong>Ready to start earning?</strong></p>
+                    <ol style="margin-left: 20px; margin-top: 10px;">
+                        <li style="margin-bottom: 8px;">Purchase $LIVELY tokens on PancakeSwap or Binance DEX</li>
+                        <li style="margin-bottom: 8px;">Hold tokens in your personal wallet (not on exchange)</li>
+                        <li style="margin-bottom: 8px;">Rewards automatically appear in your wallet</li>
+                        <li style="margin-bottom: 8px;">Join our community to unlock tier benefits</li>
+                        <li style="margin-bottom: 8px;">Track your rewards in the Lively OS dashboard</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
