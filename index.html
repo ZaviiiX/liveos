@@ -63,6 +63,33 @@
 
     <!-- Desktop -->
     <div id="desktop" class="desktop hidden">
+      <!-- BUY WINDOW -->
+      <div class="window buy-window hidden" style="display: none">
+        <div class="window-titlebar">
+          <div class="window-title">You can buy from here</div>
+          <div class="window-controls">
+            <button class="window-btn minimize" aria-label="Minimize">—</button>
+            <button class="window-btn maximize" aria-label="Maximize">□</button>
+            <button class="window-btn close" aria-label="Close">✕</button>
+          </div>
+        </div>
+        <div class="window-content">
+          <p class="buy-description">Official contract address:</p>
+          <div class="buy-ca-box">
+            <span id="buyCA" class="ca-text"></span>
+            <button
+              id="buyCopyCA"
+              class="copy-ca-btn"
+              title="Copy Contract Address"
+            >
+              Copy CA
+            </button>
+          </div>
+          <p class="buy-hint">
+            Use this address in your wallet or DEX to buy safely.
+          </p>
+        </div>
+      </div>
       <!-- Taskbar -->
       <div class="taskbar">
         <div class="start-button">
@@ -82,9 +109,9 @@
       <div class="desktop-icons">
         <div class="desktop-icon" id="browserIcon">
           <div class="icon-image">
-            <img src="Internet.png" alt="Pump Browser" />
+            <img src="Internet.png" alt="Solana XP Browser" />
           </div>
-          <div class="icon-label">Pump Browser</div>
+          <div class="icon-label">Solana XP Browser</div>
         </div>
         <div class="desktop-icon" id="rewardsIcon">
           <div class="icon-image"><img src="rewards.png" alt="Rewards" /></div>
@@ -118,10 +145,41 @@
         </div>
       </div>
 
+      <!-- BUY WINDOW -->
+      <div class="window buy-window hidden" style="display: none">
+        <div class="window-titlebar">
+          <div class="window-title">You can buy from here</div>
+          <div class="window-controls">
+            <button class="window-btn minimize" aria-label="Minimize">—</button>
+            <button class="window-btn maximize" aria-label="Maximize">□</button>
+            <button class="window-btn close" aria-label="Close">✕</button>
+          </div>
+        </div>
+        <div class="window-content">
+          <p class="buy-description">Official contract address:</p>
+
+          <div class="buy-ca-box">
+            <span id="buyCA" class="ca-text"></span>
+            <button
+              id="buyCopyCA"
+              class="copy-ca-btn"
+              title="Copy Contract Address"
+            >
+              Copy CA
+            </button>
+          </div>
+
+          <!-- (opcionalno) kratki hint/link -->
+          <p class="buy-hint">
+            Use this address in your wallet or DEX to buy safely.
+          </p>
+        </div>
+      </div>
+
       <!-- Welcome Window -->
       <div class="window welcome-window">
         <div class="window-titlebar">
-          <span class="window-title">Welcome to PumpOS</span>
+          <span class="window-title">Welcome to Solana XP</span>
           <div class="window-controls">
             <button class="window-btn minimize">_</button>
             <button class="window-btn maximize">□</button>
@@ -129,16 +187,10 @@
           </div>
         </div>
         <div class="window-content welcome-content">
+          <!-- Existing Welcome Section -->
           <div class="welcome-header">
-            <h2>Welcome to PumpOS!</h2>
+            <h2>Welcome to Solana XP!</h2>
             <div class="header-buttons">
-              <button
-                id="welcomeCopyCA"
-                class="copy-ca-btn"
-                title="Copy Contract Address"
-              >
-                Copy CA
-              </button>
               <a
                 href="#"
                 id="welcomeTwitterLink"
@@ -151,7 +203,7 @@
                   width="24"
                   height="24"
                   viewBox="0 0 24 24"
-                  fill="white"
+                  fill="black"
                 >
                   <path
                     d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
@@ -160,7 +212,8 @@
               </a>
             </div>
           </div>
-          <p>You have successfully logged in to the PumpOS environment.</p>
+         
+          <p>You have successfully logged in to the Solana XP environment.</p>
           <p>
             This retro-styled desktop interface provides a nostalgic computing
             experience.
@@ -188,7 +241,7 @@
           <h2>System Information</h2>
           <div class="control-panel-section">
             <h3>Computer Details</h3>
-            <p><strong>Operating System:</strong> PumpOS v2.0</p>
+            <p><strong>Operating System:</strong> Solana XP v2.0</p>
             <p><strong>Processor:</strong> Quantum Core i9-9900K @ 3.60GHz</p>
             <p><strong>RAM:</strong> 16.0 GB</p>
             <p><strong>System Type:</strong> 64-bit Operating System</p>
@@ -219,7 +272,7 @@
         style="width: 700px; max-width: 90vw"
       >
         <div class="window-titlebar">
-          <span class="window-title">Pump Mail - Inbox</span>
+          <span class="window-title">Solana XP Mail - Inbox</span>
           <div class="window-controls">
             <button class="window-btn minimize mail-minimize">_</button>
             <button class="window-btn maximize">□</button>
@@ -233,13 +286,13 @@
           <div class="email-list">
             <div class="email-item">
               <div class="email-from">
-                <strong>From:</strong> CEO@pumpos.com
+                <strong>From:</strong> CEO@Solana XP.com
               </div>
               <div class="email-subject">
-                <strong>Subject:</strong> Congratulations on PumpOS Launch!
+                <strong>Subject:</strong> Congratulations on Solana XP Launch!
               </div>
               <div class="email-preview">
-                Team, I'm thrilled to announce that PumpOS has officially
+                Team, I'm thrilled to announce that Solana XP has officially
                 launched! Our user base has grown to over 100,000 active users
                 in just the first week...
               </div>
@@ -247,15 +300,15 @@
             </div>
             <div class="email-item">
               <div class="email-from">
-                <strong>From:</strong> marketing@pumpos.com
+                <strong>From:</strong> marketing@Solana XP.com
               </div>
               <div class="email-subject">
                 <strong>Subject:</strong> Record-Breaking Downloads!
               </div>
               <div class="email-preview">
-                Amazing news! PumpOS has reached 500,000 downloads this month,
-                surpassing all our projections. The community response has been
-                incredible...
+                Amazing news! Solana XP has reached 500,000 downloads this
+                month, surpassing all our projections. The community response
+                has been incredible...
               </div>
               <div class="email-date">Oct 9, 2025 - 11:20 AM</div>
             </div>
@@ -268,20 +321,20 @@
               </div>
               <div class="email-preview">
                 We're excited to inform you that your Series A funding round of
-                $10M has been approved. The board is impressed with PumpOS's
+                $10M has been approved. The board is impressed with Solana XP's
                 traction...
               </div>
               <div class="email-date">Oct 8, 2025 - 9:15 AM</div>
             </div>
             <div class="email-item">
               <div class="email-from">
-                <strong>From:</strong> community@pumpos.com
+                <strong>From:</strong> community@Solana XP.com
               </div>
               <div class="email-subject">
                 <strong>Subject:</strong> 5-Star Reviews Flooding In!
               </div>
               <div class="email-preview">
-                The community is loving PumpOS! We've received over 10,000
+                The community is loving Solana XP! We've received over 10,000
                 five-star reviews praising the retro aesthetic and smooth
                 performance...
               </div>
@@ -296,7 +349,7 @@
         <button class="buddy-close" id="buddyClose">×</button>
         <img
           src="desktophelper1.png"
-          alt="Pump Bot"
+          alt="Solana XP Bot"
           class="buddy-mascot"
           id="buddyMascot"
         />
@@ -304,7 +357,7 @@
         <!-- Speech Bubbles -->
         <div class="speech-bubble bot-bubble hidden" id="botBubble">
           <div class="bubble-content" id="botBubbleContent">
-            Hello! I'm Pump Bot! 👋 Ask me anything about PumpOS!
+            Hello! I'm Solana XP Bot! 👋 Ask me anything about Solana XP!
           </div>
           <div class="bubble-tail"></div>
         </div>
@@ -349,20 +402,20 @@
       <!-- Shutdown Overlay -->
       <div id="shutdownOverlay" class="shutdown-overlay hidden">
         <div class="shutdown-content">
-          <div class="shutdown-logo">PumpOS</div>
+          <div class="shutdown-logo">Solana XP</div>
           <div class="shutdown-message">Shutting down...</div>
           <div class="shutdown-spinner"></div>
         </div>
       </div>
 
-      <!-- Pump Browser Window -->
+      <!-- Solana XP Browser Window -->
       <div
         class="window browser-window hidden"
         style="width: 700px; max-width: 90vw"
       >
         <div class="window-titlebar browser-titlebar">
           <span class="window-title"
-            >Pump Token - Official Information Portal</span
+            >Solana XP Token - Official Information Portal</span
           >
           <div class="window-controls">
             <button class="window-btn minimize">_</button>
@@ -372,7 +425,7 @@
         </div>
         <div class="window-content browser-content">
           <div class="browser-header">
-            <h2>Pump - By Traders, For Traders</h2>
+            <h2>Solana XP - By Traders, For Traders</h2>
             <div class="header-buttons">
               <button
                 id="browserCopyCA"
@@ -393,7 +446,7 @@
                   width="24"
                   height="24"
                   viewBox="0 0 24 24"
-                  fill="white"
+                  fill="black"
                 >
                   <path
                     d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
@@ -404,9 +457,9 @@
           </div>
 
           <div class="info-section">
-            <h3>What is Pump?</h3>
+            <h3>What is Solana XP?</h3>
             <p>
-              Pump is a revolutionary project building a fully customizable
+              Solana XP is a revolutionary project building a fully customizable
               operating system designed specifically by traders, for traders.
               Our vision is to create the ultimate trading environment that
               combines cutting-edge technology with the flexibility and tools
@@ -415,13 +468,13 @@
             <p>
               This is more than just software - it's a complete ecosystem that
               puts the power of customization in your hands. Whether you're a
-              day trader, crypto enthusiast, or professional investor, Pump
+              day trader, crypto enthusiast, or professional investor, Solana XP
               adapts to your unique workflow and trading style.
             </p>
           </div>
 
           <div class="info-section">
-            <h3>The Pump Operating System</h3>
+            <h3>The Solana XP Operating System</h3>
             <p><strong>Fully Customizable Trading Environment:</strong></p>
             <ul>
               <li>
@@ -445,25 +498,25 @@
           </div>
 
           <div class="info-section">
-            <h3>$pumpos Token Information</h3>
-            <p><strong>Token Name:</strong> PumpOS</p>
-            <p><strong>Symbol:</strong> $pumpos</p>
+            <h3>$Solana XP Token Information</h3>
+            <p><strong>Token Name:</strong> Solana XP</p>
+            <p><strong>Symbol:</strong> $Solana XP</p>
             <p><strong>Blockchain:</strong> BNB Chain (BEP-20)</p>
             <p>
               <strong>Contract Address:</strong> 0x... (Verified on BSCScan)
             </p>
-            <p><strong>Total Supply:</strong> 1,000,000,000 Pump</p>
+            <p><strong>Total Supply:</strong> 1,000,000,000 Solana XP</p>
             <p>
-              <strong>Token Purpose:</strong> $pumpos serves as the native token
-              of the Pump ecosystem, granting holders access to premium
-              features, governance rights, and exclusive rewards.
+              <strong>Token Purpose:</strong> $Solana XP serves as the native
+              token of the Solana XP ecosystem, granting holders access to
+              premium features, governance rights, and exclusive rewards.
             </p>
           </div>
 
           <div class="info-section">
             <h3>Tokenomics</h3>
             <ul>
-              <li><strong>Total Supply:</strong> 1,000,000,000 $pumpos</li>
+              <li><strong>Total Supply:</strong> 1,000,000,000 $Solana XP</li>
               <li><strong>Liquidity Pool:</strong> 90% (Locked)</li>
               <li><strong>Community Rewards:</strong> 4%</li>
               <li><strong>Development Fund:</strong> 5% (Vested)</li>
@@ -476,7 +529,9 @@
             <h3>Token Utility & Benefits</h3>
             <p><strong>Operating System Access:</strong></p>
             <ul>
-              <li>Free access to PumpOS basic version for all token holders</li>
+              <li>
+                Free access to Solana XP basic version for all token holders
+              </li>
               <li>Premium features unlocked based on token holdings</li>
               <li>Priority updates and early access to new tools</li>
               <li>Lifetime license - hold tokens, keep access</li>
@@ -513,7 +568,7 @@
             <h3>Development Roadmap</h3>
             <ul>
               <li>
-                <strong>Q4 2025:</strong> Token launch, PumpOS Alpha release,
+                <strong>Q4 2025:</strong> Token launch, Solana XP Alpha release,
                 community building
               </li>
               <li>
@@ -540,7 +595,7 @@
             <p>
               Our team consists of experienced traders who understand the
               challenges and needs of the trading community. Every feature in
-              PumpOS is designed with real-world trading in mind, tested by
+              Solana XP is designed with real-world trading in mind, tested by
               actual traders, and optimized for performance and reliability.
             </p>
             <p>
@@ -552,7 +607,7 @@
 
           <div class="info-section">
             <h3>Official Resources</h3>
-            <p><strong>Website:</strong> pumpos.xyz</p>
+            <p><strong>Website:</strong> Solana XP.xyz</p>
             <p><strong>Contract Explorer:</strong> BSCScan.com</p>
             <p><strong>Trading:</strong> PancakeSwap, Binance DEX</p>
             <p><strong>Community:</strong> Telegram, Discord, Twitter</p>
@@ -563,7 +618,7 @@
             <p>
               Cryptocurrency investments carry inherent risks. Please conduct
               thorough research and only invest what you can afford to lose. The
-              Pump token team is committed to transparency and long-term
+              Solana XP token team is committed to transparency and long-term
               sustainable growth, but market conditions can be volatile. Always
               verify contract addresses and only purchase through official
               channels.
@@ -579,7 +634,7 @@
       >
         <div class="window-titlebar">
           <span class="window-title"
-            >Rewards - $pumpos Token Holder Benefits</span
+            >Rewards - $Solana XP Token Holder Benefits</span
           >
           <div class="window-controls">
             <button class="window-btn minimize rewards-minimize">_</button>
@@ -595,7 +650,7 @@
           <div class="info-section">
             <h3>Automatic Reflection Rewards</h3>
             <p>
-              Hold $pumpos tokens and automatically earn passive income with
+              Hold $Solana XP tokens and automatically earn passive income with
               every transaction on the network.
             </p>
             <ul>
@@ -624,7 +679,7 @@
               Unlock exclusive perks and benefits based on your token holdings:
             </p>
 
-            <p><strong>Bronze Tier (100,000+ $pumpos)</strong></p>
+            <p><strong>Bronze Tier (100,000+ $Solana XP)</strong></p>
             <ul>
               <li>Access to exclusive community channels</li>
               <li>Early announcements and updates</li>
@@ -632,7 +687,7 @@
               <li>Community voting rights</li>
             </ul>
 
-            <p><strong>Silver Tier (500,000+ $pumpos)</strong></p>
+            <p><strong>Silver Tier (500,000+ $Solana XP)</strong></p>
             <ul>
               <li>All Bronze benefits plus:</li>
               <li>Priority customer support</li>
@@ -642,23 +697,23 @@
               <li>Beta access to new features</li>
             </ul>
 
-            <p><strong>Gold Tier (1,000,000+ $pumpos)</strong></p>
+            <p><strong>Gold Tier (1,000,000+ $Solana XP)</strong></p>
             <ul>
               <li>All Silver benefits plus:</li>
               <li>Exclusive NFT drops and collectibles</li>
               <li>Partnership perks and discounts</li>
               <li>VIP trading room access</li>
-              <li>Premium PumpOS features unlocked</li>
+              <li>Premium Solana XP features unlocked</li>
               <li>Monthly strategy sessions</li>
             </ul>
 
-            <p><strong>Diamond Tier (5,000,000+ $pumpos)</strong></p>
+            <p><strong>Diamond Tier (5,000,000+ $Solana XP)</strong></p>
             <ul>
               <li>All Gold benefits plus:</li>
               <li>Private Discord channel with dev team</li>
               <li>Direct team consultations</li>
               <li>Premium reward multiplier (1.5x reflections)</li>
-              <li>Lifetime PumpOS Enterprise license</li>
+              <li>Lifetime Solana XP Enterprise license</li>
               <li>Featured in community spotlights</li>
               <li>Exclusive merchandise and swag</li>
             </ul>
@@ -698,7 +753,7 @@
           <div class="info-section">
             <h3>Revenue Sharing Program</h3>
             <p>
-              Token holders directly benefit from the success of the Pump
+              Token holders directly benefit from the success of the Solana XP
               ecosystem:
             </p>
             <ul>
@@ -707,7 +762,7 @@
                 enterprise sales distributed to holders
               </li>
               <li>
-                <strong>Platform Fees:</strong> Transaction fees from PumpOS
+                <strong>Platform Fees:</strong> Transaction fees from Solana XP
                 marketplace shared with community
               </li>
               <li>
@@ -787,7 +842,7 @@
             <p><strong>Ready to start earning?</strong></p>
             <ol style="margin-left: 20px; margin-top: 10px">
               <li style="margin-bottom: 8px">
-                Purchase $pumposOS tokens on PancakeSwap or Binance DEX
+                Purchase $Solana XPOS tokens on PancakeSwap or Binance DEX
               </li>
               <li style="margin-bottom: 8px">
                 Hold tokens in your personal wallet (not on exchange)
@@ -799,7 +854,7 @@
                 Join our community to unlock tier benefits
               </li>
               <li style="margin-bottom: 8px">
-                Track your rewards in the PumpOS dashboard
+                Track your rewards in the Solana XP dashboard
               </li>
             </ol>
           </div>
