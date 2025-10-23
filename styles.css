@@ -18,7 +18,7 @@ body {
 
 /* Login Screen */
 .login-screen {
-    background: linear-gradient(135deg, #5FCB87 0%, #84EFAB 50%, #84EFAB 100%);
+    background: linear-gradient(45deg, #9945FF 0%, #14F195 100%);
     height: 100vh;
     display: flex;
     align-items: center;
@@ -45,19 +45,20 @@ body {
 }
 
 .login-box {
-    background: linear-gradient(145deg, #ECE9D8, #D4D0C8);
+    background: linear-gradient(145deg, #ECE9D8, #D4D0C8); /* XP bež-siva pozadina */
     border: 3px solid;
-    border-color: #FFFFFF #404040 #404040 #FFFFFF;
+    border-color: #FFFFFF #404040 #404040 #FFFFFF; /* tipičan XP bevel efekat (svjetlo gore/lijevo, tamno dole/desno) */
     padding: 25px;
     box-shadow: 
-        0 0 30px rgba(0, 170, 255, 0.5),
-        inset 0 1px 0 rgba(255,255,255,0.8),
-        0 10px 30px rgba(0,0,0,0.4);
+        0 0 30px rgba(0, 170, 255, 0.5), /* plavi glow – daje osjećaj “focus” */
+        inset 0 1px 0 rgba(255,255,255,0.8), /* unutrašnji highlight */
+        0 10px 30px rgba(0,0,0,0.4); /* vanjska sjena */
     min-width: 450px;
     animation: loginBoxAppear 1s cubic-bezier(0.34, 1.56, 0.64, 1);
     position: relative;
     z-index: 1;
 }
+
 
 @keyframes loginBoxAppear {
     from {
@@ -68,6 +69,28 @@ body {
         opacity: 1;
         transform: scale(1) translateY(0) rotateX(0deg);
     }
+}
+
+.xp-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 0 8px 0;
+}
+
+.xp-product-image {
+    width: 250px; /* adjusted to fit banner */
+    height: auto;
+    display: block;
+    margin: 0;
+    image-rendering: pixelated;
+}
+
+/* lift the logo visually without moving the edition text (edition stays at the bottom) */
+.xp-product-image {
+    transform: translateY(5em);
+    transform-origin: center bottom;
+    transition: transform 0.15s ease;
 }
 
 .login-logo {
@@ -116,7 +139,7 @@ body {
 .input-group label {
     font-size: 8px;
     font-weight: bold;
-    color: #000080;
+    color: #14F195;
     text-shadow: 1px 1px 0 rgba(255,255,255,0.5);
 }
 
@@ -1427,4 +1450,145 @@ body {
 .window.maximized .browser-content,
 .window.maximized .mail-content {
     max-height: calc(100vh - 150px);
+}
+
+/* === XP LOGIN – precizne boje i stil === */
+:root {
+  --xp-beige-1:#ECE9D8;
+  --xp-beige-2:#D4D0C8;
+  --xp-blue-1:#3B6EA5;   /* gornji svjetliji */
+  --xp-blue-2:#1E4AA9;   /* donji tamniji */
+  --xp-blue-3:#0A246A;   /* linija/akcent */
+  --xp-input:#7F9DB9;    /* XP border plavičast */
+  --xp-grey:#C0C0C0;
+  --xp-grey-dark:#808080;
+}
+
+/* koristi Tahoma samo na loginu da bude XP – ostatak sistema ostaje tvoj font */
+.xp-login { font-family: Tahoma, Verdana, sans-serif; }
+
+/* tvoja kutija već ima bevel; samo je malo “xp-iziramo” kroz klase ispod */
+.xp-titlebar{
+  background: linear-gradient(to bottom, var(--xp-blue-1), var(--xp-blue-2));
+  color:#fff;
+  padding:6px 10px;
+  font-weight:700;
+  border-bottom:2px solid var(--xp-blue-3);
+  text-shadow:1px 1px 0 rgba(0,0,0,.4);
+}
+
+.xp-banner{
+    /* increase height and center content so logo + edition text fit */
+    height:110px;
+    background: linear-gradient(to right, #333333, #222222 60%, #111111 100%);
+    border-bottom:2px solid rgba(255,255,255,.5);
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow: visible;
+    padding-top: 6px;
+}
+
+/* “Windows XP Professional” feeling bez MS logotipa */
+.xp-product{
+    /* span full banner width so the logo can be centered while edition sits right */
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 8px; /* stable position for edition */
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 0 rgba(0,0,0,.35);
+    z-index: 5; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* center the logo horizontally */
+    padding-right: 12px; /* keep a small inset from the right edge for edition */
+}
+.xp-product-line1{ font-size:18px; letter-spacing:.5px; }
+.xp-product-line2{ font-size:22px; font-weight:800; margin-top:-4px; }
+.xp-edition{
+    font-size:12px;
+    opacity: 1;
+    margin-top: 6px;
+    color: #ffffff;
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.5);
+    z-index: 3;
+}
+
+/* keep the edition text right-aligned under the centered logo */
+.xp-product .xp-edition{
+    /* absolutely position the edition text so it's not affected by image transforms */
+    position: absolute;
+    right: 12px;
+    bottom: 8px;
+    margin-top: 0;
+}
+
+.xp-body{
+  background: linear-gradient(145deg, var(--xp-beige-1), var(--xp-beige-2));
+  padding:16px 16px 12px;
+  border-top: 2px solid #fff;
+}
+
+.xp-row{ display:flex; align-items:center; gap:10px; margin:10px 0; }
+.xp-label{ width:110px; color:#000; font-size:12px; }
+.xp-input{
+  flex:1;
+  height:24px;
+  padding:2px 6px;
+  font-size:12px;
+  background:#fff;
+  border:1px solid var(--xp-input);
+  box-shadow: inset 1px 1px 0 rgba(255,255,255,.6);
+}
+.xp-input:focus{
+  outline: none;
+  border-color:#3A6EA5;
+  box-shadow: 0 0 0 1px #3A6EA5;
+}
+
+/* XP dugmad */
+.xp-buttons{
+  display:flex; gap:8px; justify-content:flex-start;
+  margin-top:12px; flex-wrap:wrap;
+}
+.xp-btn{
+  min-width:88px; height:26px; padding:0 12px;
+  background: linear-gradient(to bottom, #F2F2F2, #DCDCDC);
+  border:2px solid; 
+  border-color:#FFFFFF var(--xp-grey-dark) var(--xp-grey-dark) #FFFFFF; /* bevel */
+  font-size:12px; font-weight:700; color:#000; cursor:pointer;
+}
+.xp-btn:active{
+  border-color: var(--xp-grey-dark) #FFFFFF #FFFFFF var(--xp-grey-dark);
+  background: linear-gradient(to bottom, #DCDCDC, #F2F2F2);
+}
+.xp-primary{
+  background: linear-gradient(to bottom, #E6F0FF, #BBD0FF);
+  border-color:#FFFFFF #4F6DB3 #4F6DB3 #FFFFFF;
+}
+.xp-warn{
+  min-width:110px;
+}
+.xp-secondary{
+  min-width:110px;
+}
+
+/* greška ispod dugmadi – XP stil sitan crveni */
+.xp-error{
+  margin-top:8px; min-height:16px;
+  color:#C00000; font-size:11px;
+}
+
+/* Dimenzije login prozora: malo uže kao na originalu */
+.login-box.xp-login{
+  min-width: 420px;
+  max-width: 460px;
+  padding:0;   /* sve paddinge rješavaju xp-* sekcije iznad */
+  box-shadow:
+    0 0 18px rgba(0, 102, 204, .35),
+    inset 0 1px 0 rgba(255,255,255,.8),
+    0 8px 26px rgba(0,0,0,.35);
 }
