@@ -123,7 +123,7 @@ body {
 .input-group input {
     padding: 10px;
     border: 2px solid;
-    border-color: #7A96DF #0055FF #0055FF #7A96DF;
+    border-color: #84EFAB #5FCB87 #5FCB87 #84EFAB;
     background: white;
     font-family: 'Courier New', monospace;
     font-size: 12px;
@@ -147,7 +147,7 @@ body {
 }
 
 .login-button:hover {
-    background: linear-gradient(180deg, #66BBFF 0%, #3399FF 100%);
+    background: linear-gradient(180deg, #5FCB87 0%, #84EFAB 100%);
     box-shadow: 0 4px 0 #15161B, 0 6px 20px rgba(0, 170, 255, 0.5);
     transform: translateY(-2px);
 }
@@ -167,7 +167,7 @@ body {
 /* Desktop */
 .desktop {
     background: 
-        linear-gradient(135deg, #0055FF 0%, #00AAFF 40%, #00FFFF 70%, #66BBFF 100%),
+        linear-gradient(135deg, #5FCB87 0%, #5FCB87 40%, #5FCB87 70%, #5FCB87 100%),
         repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,0.03) 10px, rgba(255,255,255,0.03) 20px);
     height: 100vh;
     position: relative;
@@ -369,8 +369,8 @@ body {
     left: 0;
     right: 0;
     height: 50px;
-    background: linear-gradient(180deg, #3399FF 0%, #0055FF 100%);
-    border-top: 3px solid #66BBFF;
+    background: linear-gradient(180deg, #84EFAB 0%, #0055FF 100%);
+    border-top: 3px solid #5FCB87;
     display: flex;
     align-items: center;
     padding: 4px;
@@ -494,14 +494,14 @@ body {
 }
 
 .window-titlebar {
-    background: linear-gradient(180deg, #3399FF 0%, #0055FF 100%);
+    background: linear-gradient(180deg, #84EFAB 0%, #0055FF 100%);
     color: white;
     padding: 8px 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     cursor: move;
-    border-bottom: 2px solid #66BBFF;
+    border-bottom: 2px solid #5FCB87;
     box-shadow: inset 0 1px 0 rgba(255,255,255,0.3);
 }
 
@@ -675,13 +675,13 @@ body {
 }
 
 .browser-content::-webkit-scrollbar-thumb {
-    background: linear-gradient(90deg, #3399FF, #0055FF);
+    background: linear-gradient(90deg, #84EFAB, #0055FF);
     border: 2px solid;
-    border-color: #66BBFF #15161B #15161B #66BBFF;
+    border-color: #5FCB87 #15161B #15161B #5FCB87;
 }
 
 .browser-content::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(90deg, #66BBFF, #3399FF);
+    background: linear-gradient(90deg, #5FCB87, #84EFAB);
 }
 
 .browser-header {
@@ -804,13 +804,13 @@ body {
 }
 
 .mail-content::-webkit-scrollbar-thumb {
-    background: linear-gradient(90deg, #3399FF, #0055FF);
+    background: linear-gradient(90deg, #84EFAB, #0055FF);
     border: 2px solid;
-    border-color: #66BBFF #15161B #15161B #66BBFF;
+    border-color: #5FCB87 #15161B #15161B #5FCB87;
 }
 
 .mail-content::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(90deg, #66BBFF, #3399FF);
+    background: linear-gradient(90deg, #5FCB87, #84EFAB);
 }
 
 .mail-header {
@@ -848,7 +848,7 @@ body {
 
 .email-item:hover {
     background: linear-gradient(145deg, #E6F7FF, #CCF0FF);
-    border-color: #66BBFF #0055FF #0055FF #66BBFF;
+    border-color: #5FCB87 #0055FF #0055FF #5FCB87;
     transform: translateX(5px);
     box-shadow: 0 4px 10px rgba(0,170,255,0.3);
 }

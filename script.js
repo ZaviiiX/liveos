@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
     twitterLink.addEventListener('click', (e) => {
         e.preventDefault();
         // Replace with actual Twitter URL when available
-        const twitterUrl = 'https://x.com/Pump_BSC'; // Update this URL when Twitter link is provided
+        const twitterUrl = 'https://x.com/pumpOS_'; // Update this URL when Twitter link is provided
         window.open(twitterUrl, '_blank');
     });
 
@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
     welcomeTwitterLink.addEventListener('click', (e) => {
         e.preventDefault();
         // Replace with actual Twitter URL when available
-        const twitterUrl = 'https://x.com/Pump_BSC'; // Update this URL when Twitter link is provided
+        const twitterUrl = 'https://x.com/pumpOS_'; // Update this URL when Twitter link is provided
         window.open(twitterUrl, '_blank');
     });
 
