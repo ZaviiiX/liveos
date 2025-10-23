@@ -153,7 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Contract Address
-    const CONTRACT_ADDRESS = '';
+    const CONTRACT_ADDRESS = '424tCJy2ZFctvznL2Qi1h7YvwWJZNWNoy3FELGPs3fKy';
 
     // Copy CA button handlers
     const welcomeCopyCA = document.getElementById('welcomeCopyCA');
