@@ -437,6 +437,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const helperResponses = {
     // Greetings
     'hello': 'Hello! 👋 Welcome to Solana XP! I\'m your Desktop Helper. How can I assist you today?',
+    'petar': 'Petar! 👋 Al ga stara kurva napravi!',
     'hi': 'Hi there! 😊 I\'m Solana XP Bot, ready to help you navigate Solana XP. What would you like to know?',
     'hey': 'Hey! 🤖 Great to see you! I\'m here to help with any questions about Solana XP.',
     'good morning': 'Good morning! ☀️ Hope you\'re having a wonderful day! How can I help you with Solana XP?',
