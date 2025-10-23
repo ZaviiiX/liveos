@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Solana XP</title>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" type="image/x-icon" href="solanaxp.png" />
+    <link rel="icon" type="image/x-icon" href="solana.png" />
   </head>
   <body>
     <!-- Login Screen -->
@@ -64,7 +64,7 @@
     <!-- Desktop -->
     <div id="desktop" class="desktop hidden">
       <!-- Centered Solana Logo Overlay -->
-      <img src="solana.png" class="desktop-logo" alt="Solana Logo" />
+      <img src="solanaxp.png" class="desktop-logo" alt="Solana Logo" />
       <!-- BUY WINDOW -->
       <div class="window buy-window hidden" style="display: none">
         <div class="window-titlebar">
@@ -94,10 +94,10 @@
       </div>
       <!-- Taskbar -->
       <div class="taskbar">
-        <div class="start-button">
+        <button id="startButton" class="start-button">
           <span class="start-icon">⊞</span>
-          <span>Start</span>
-        </div>
+          start
+        </button>
         <div class="taskbar-tasks"></div>
         <div class="taskbar-tray">
           <button id="muteToggle" class="mute-toggle" title="Toggle Music">
@@ -214,7 +214,7 @@
               </a>
             </div>
           </div>
-         
+
           <p>You have successfully logged in to the Solana XP environment.</p>
           <p>
             This retro-styled desktop interface provides a nostalgic computing
@@ -863,6 +863,56 @@
         </div>
       </div>
     </div>
+
+    <!-- START MENU (XP style) -->
+    <nav id="startMenu" class="start-menu hidden" aria-hidden="true">
+      <div class="start-menu-left">
+        <div class="start-user">PumpOS</div>
+      </div>
+
+      <div class="start-menu-right">
+        <ul class="start-primary">
+          <li data-action="programs">
+            <span class="mi">🗂️</span> Programs ▸
+            <ul class="submenu">
+              <li data-open=".browser-window">
+                <span class="mi">🌐</span> Pump Browser
+              </li>
+              <li data-open=".rewards-window">
+                <span class="mi">🏆</span> Rewards
+              </li>
+              <li data-open=".mycomputer-window">
+                <span class="mi">💻</span> My Computer
+              </li>
+              <li data-open=".mail-window"><span class="mi">✉️</span> Mail</li>
+            </ul>
+          </li>
+          <li data-action="documents"><span class="mi">📄</span> Documents</li>
+          <li data-action="settings">
+            <span class="mi">⚙️</span> Settings ▸
+            <ul class="submenu">
+              <li data-action="mute-toggle">
+                <span class="mi">🔊</span> Toggle Sound
+              </li>
+            </ul>
+          </li>
+          <li data-action="search"><span class="mi">🔎</span> Search</li>
+          <li data-action="help">
+            <span class="mi">❓</span> Help and Support
+          </li>
+          <li data-action="run"><span class="mi">🏃</span> Run…</li>
+        </ul>
+
+        <ul class="start-secondary">
+          <li data-action="logoff" class="logoff">
+            <span class="mi">🚪</span> Log Off…
+          </li>
+          <li data-action="shutdown" class="shutdown">
+            <span class="mi">⏻</span> Turn Off Computer…
+          </li>
+        </ul>
+      </div>
+    </nav>
 
     <script src="script.js"></script>
   </body>
