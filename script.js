@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // ===== LIVELY BROWSER =====
+    // ===== Pump BROWSER =====
     const browserIcon = document.getElementById('browserIcon');
     const browserWindow = document.querySelector('.browser-window');
 
@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
     twitterLink.addEventListener('click', (e) => {
         e.preventDefault();
         // Replace with actual Twitter URL when available
-        const twitterUrl = 'https://x.com/Lively_BSC'; // Update this URL when Twitter link is provided
+        const twitterUrl = 'https://x.com/Pump_BSC'; // Update this URL when Twitter link is provided
         window.open(twitterUrl, '_blank');
     });
 
@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
     welcomeTwitterLink.addEventListener('click', (e) => {
         e.preventDefault();
         // Replace with actual Twitter URL when available
-        const twitterUrl = 'https://x.com/Lively_BSC'; // Update this URL when Twitter link is provided
+        const twitterUrl = 'https://x.com/Pump_BSC'; // Update this URL when Twitter link is provided
         window.open(twitterUrl, '_blank');
     });
 
@@ -259,7 +259,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Show welcome message after a delay
         setTimeout(() => {
-            showBotBubble('Hello! I\'m Lively Bot! 👋 Click me to chat!');
+            showBotBubble('Hello! I\'m Pump Bot! 👋 Click me to chat!');
         }, 800);
     });
 
@@ -347,17 +347,17 @@ document.addEventListener('DOMContentLoaded', () => {
     // Helper chat functionality
     const helperResponses = {
         // Greetings
-        'hello': 'Hello! 👋 Welcome to Lively OS! I\'m your Desktop Helper. How can I assist you today?',
-        'hi': 'Hi there! 😊 I\'m Lively Bot, ready to help you navigate Lively OS. What would you like to know?',
-        'hey': 'Hey! 🤖 Great to see you! I\'m here to help with any questions about Lively OS.',
-        'good morning': 'Good morning! ☀️ Hope you\'re having a wonderful day! How can I help you with Lively OS?',
-        'good afternoon': 'Good afternoon! 🌤️ I\'m here to assist you with Lively OS. What can I do for you?',
-        'good evening': 'Good evening! 🌙 Ready to help you explore Lively OS. What\'s on your mind?',
-        'greetings': 'Greetings! 🎉 I\'m your friendly Desktop Helper. Ask me anything about Lively OS!',
+        'hello': 'Hello! 👋 Welcome to PumpOS! I\'m your Desktop Helper. How can I assist you today?',
+        'hi': 'Hi there! 😊 I\'m Pump Bot, ready to help you navigate PumpOS. What would you like to know?',
+        'hey': 'Hey! 🤖 Great to see you! I\'m here to help with any questions about PumpOS.',
+        'good morning': 'Good morning! ☀️ Hope you\'re having a wonderful day! How can I help you with PumpOS?',
+        'good afternoon': 'Good afternoon! 🌤️ I\'m here to assist you with PumpOS. What can I do for you?',
+        'good evening': 'Good evening! 🌙 Ready to help you explore PumpOS. What\'s on your mind?',
+        'greetings': 'Greetings! 🎉 I\'m your friendly Desktop Helper. Ask me anything about PumpOS!',
         
         // Goodbyes
-        'goodbye': 'Goodbye! 👋 Thanks for using Lively OS. Feel free to come back anytime you need assistance!',
-        'bye': 'Bye! 😊 Have a great day! I\'ll be here whenever you need help with Lively OS.',
+        'goodbye': 'Goodbye! 👋 Thanks for using PumpOS. Feel free to come back anytime you need assistance!',
+        'bye': 'Bye! 😊 Have a great day! I\'ll be here whenever you need help with PumpOS.',
         'see you': 'See you later! 🌟 Thanks for chatting with me. Come back anytime!',
         'later': 'Catch you later! ✌️ Don\'t hesitate to reach out if you need help!',
         'farewell': 'Farewell! 🎊 It was a pleasure helping you today. Take care!',
@@ -365,23 +365,23 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Politeness
         'thank': 'You\'re very welcome! 😊 I\'m always happy to help. Is there anything else you\'d like to know?',
-        'thanks': 'My pleasure! 🌟 Feel free to ask me anything else about Lively OS!',
-        'please': 'Of course! I\'m here to help. What would you like to know about Lively OS?',
+        'thanks': 'My pleasure! 🌟 Feel free to ask me anything else about PumpOS!',
+        'please': 'Of course! I\'m here to help. What would you like to know about PumpOS?',
         
         // Information queries
-        'what is lively os': 'Lively OS is a retro-styled operating system interface that brings nostalgia and modern functionality together! It features a beautiful cyan gradient design and classic window aesthetics.',
+        'what is PumpOS': 'PumpOS is a retro-styled operating system interface that brings nostalgia and modern functionality together! It features a beautiful cyan gradient design and classic window aesthetics.',
         'how do i use': 'Double-click any desktop icon to open applications! You can explore the Browser, My Computer, Mail, and more. Click the Power icon to shutdown the system.',
-        'features': 'Lively OS includes: Lively Browser for BNB token info, My Computer for system details, Mail with success stories, this Desktop Helper for assistance, an empty Recycle Bin, and a Power button with cool animations!',
-        'who created': 'Lively OS was created as a nostalgic tribute to classic operating systems, combining retro aesthetics with modern web technologies.',
-        'help': 'I can help you learn about Lively OS! Try asking: "What is Lively OS?", "How do I use this?", "What features are available?", or just say hi!',
+        'features': 'PumpOS includes: Pump Browser for BNB token info, My Computer for system details, Mail with success stories, this Desktop Helper for assistance, an empty Recycle Bin, and a Power button with cool animations!',
+        'who created': 'PumpOS was created as a nostalgic tribute to classic operating systems, combining retro aesthetics with modern web technologies.',
+        'help': 'I can help you learn about PumpOS! Try asking: "What is PumpOS?", "How do I use this?", "What features are available?", or just say hi!',
         
         // Fun interactions
-        'how are you': 'I\'m doing fantastic! 🚀 Thanks for asking! I\'m always excited to help users explore Lively OS. How are you?',
-        'awesome': 'That\'s awesome! 🎉 Glad you\'re enjoying Lively OS!',
-        'cool': 'Right? Lively OS is pretty cool! 😎 What would you like to explore next?',
+        'how are you': 'I\'m doing fantastic! 🚀 Thanks for asking! I\'m always excited to help users explore PumpOS. How are you?',
+        'awesome': 'That\'s awesome! 🎉 Glad you\'re enjoying PumpOS!',
+        'cool': 'Right? PumpOS is pretty cool! 😎 What would you like to explore next?',
         'amazing': 'I know, right? Amazing! ⭐ Is there anything specific you\'d like to learn about?',
         
-        'default': 'That\'s an interesting question! Lively OS features include a browser, mail client, system information, and more. Try asking about specific features, say hello, or type "help" for suggestions!'
+        'default': 'That\'s an interesting question! PumpOS features include a browser, mail client, system information, and more. Try asking about specific features, say hello, or type "help" for suggestions!'
     };
 
     function showBotBubble(message) {
@@ -482,7 +482,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const shutdownContent = shutdownOverlay.querySelector('.shutdown-content');
         
         shutdownContent.innerHTML = `
-            <div class="boot-logo">Lively OS</div>
+            <div class="boot-logo">PumpOS</div>
             <div class="boot-message">Booting up...</div>
             <div class="boot-progress">
                 <div class="boot-progress-bar"></div>
@@ -503,7 +503,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
             // Reset shutdown overlay for next time
             shutdownContent.innerHTML = `
-                <div class="shutdown-logo">Lively OS</div>
+                <div class="shutdown-logo">PumpOS</div>
                 <div class="shutdown-message">Shutting down...</div>
                 <div class="shutdown-spinner"></div>
             `;
